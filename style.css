@@ -240,3 +240,8 @@ html {
     margin-bottom: 0;
   }
 }
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 2rem; /* or even 1rem if you want just a small nudge */
+  }
+}
