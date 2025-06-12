@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Magnolia Visuals">
+  <meta property="og:description" content="Cinematic video production, photography, and design.">
+  <meta property="og:image" content="https://getmagnoliavisuals.com/icons/ambre_trans.png">
+  <meta property="og:url" content="https://getmagnoliavisuals.com">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Magnolia Visuals">
+
+  <title>Magnolia Visuals</title>
+  <meta name="description" content="Magnolia Visuals is a Mississippi based creative studio offering cinematic video production, photography, and branding for bold storytellers.">
+  <meta name="keywords" content="video production, Mississippi videographer, photography, branding, design studio, creative agency">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" href="icons/white_trans.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <style>
+    .portfolio-grid, .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+    .photo-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .photo-grid img {
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 0.5rem;
+      display: block;
+      margin: auto;
+      align-self: center;
+      justify-self: center;
+    }
+    .portfolio-item video {
+      width: auto;
+      max-width: 100%;
+      border-radius: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .portfolio-item h4 {
+      margin: 1rem 0 0.5rem;
+    }
+    body::after {
+  content: '';
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 125px;
+  height: 125px;
+  background: url('icons/ambre_trans.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 9999;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      Magnolia Visuals
+    </div>
+    <div class="logo-container">
+  <img src="icons/grey_trans.png" alt="Magnolia Logo" style="height: 48px; vertical-align: middle;">
+  </div>
+  </div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav id="navbar">
+      <a href="#portfolio">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="video/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Rooted in Story. Crafted in Light.</h1>
+      <p>We bring bold ideas to life through video, photography, and design.</p>
+      <div class="buttons">
+        <a href="#services">Explore Services</a>
+        <a href="#contact">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about" data-aos="zoom-in-up">
+    <h2>Our Story</h2>
+    <p>Magnolia Visuals is a Mississippi based creative team serving the southeast, offering full-service production, design, and strategy. We're passionate about bringing stories to life with quality and intentionality.</p>
+  </section>
+
+  <section class="services" id="services" data-aos="zoom-in-up">
+    <h2>What We Do</h2>
+    <div class="services-list">
+      <div><strong>Video Production</strong><br/>From cinematic commercials to heartfelt wedding films, we craft video content that tells your story with clarity, emotion, and impact. Our services include pre-production planning, professional filming, and high-end editing tailored to your brand or occasion.</div>
+      <div><strong>Photography</strong><br/>We offer styled brand shoots, lifestyle imagery, product photography, sports, and event coverage. Our photography captures the tone and texture of your story with an editorial eye.      </div>
+      <div><strong>Design</strong><br/>Our design work ranges from bold visual identities to motion graphics and digital content packages. We help brands express their personality through compelling logos, typography, layouts, and custom assets.      </div>
+      <div><strong>Creative Strategy</strong><br/>        With a strong understanding of audience and narrative, we guide your vision from idea to execution. We develop storytelling strategies, campaign content plans, and visual direction to ensure your brand connects and converts.      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio" data-aos="zoom-in-up">
+    <h2>Featured Work</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="video-wrapper" onclick="loadVimeo(this)" data-vimeo-id="1092650641">
+         <img src="thumb/couchman.png" alt="Play video" class="video-thumbnail">
+         <div class="play-button"></div>
+        </div>
+        <h4>Wedding: Luke & Macy Couchman</h4>
+        <p>Couchman wedding in Madison, MS</p>
+      </div>
+      <div class="portfolio-item">
+         <div class="video-wrapper" onclick="loadVimeo(this)" data-vimeo-id="795928680">
+         <img src="thumb/reel.png" alt="Play video" class="video-thumbnail">
+         <div class="play-button"></div>
+        </div>
+        <h4>Athletics Reel</h4>
+        <p>Highlight clips from the past 5 years of Mississippi State Athletics</p>
+      </div>
+      <div class="portfolio-item">
+       <div class="video-wrapper" onclick="loadVimeo(this)" data-vimeo-id="814843220">
+  <img src="thumb/maddy.png" alt="Testimony Video" class="video-thumbnail">
+  <div class="play-button"></div>
+</div>
+        <h4>Maddy Anderson Testimony</h4>
+        <p>The story of how an injury led to a restored faith</p>
+      </div>
+      <div class="portfolio-item">
+       <div class="video-wrapper" onclick="loadVimeo(this)" data-vimeo-id="789161578">
+  <img src="thumb/river.png" alt="Testimony Video" class="video-thumbnail">
+  <div class="play-button"></div>
+  </div>
+        <h4>"Down to the River" Zechariah Lloyd Music Video</h4>
+        <p>Music video for Mississppi's 2022 Songwriter of the Year</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-gallery" id="photography" data-aos="zoom-in-up">
+    <h2>Photography Highlights</h2>
+    <div class="photo-grid">
+      <img src="photo/fire.jpg" alt="Photography 1" loading="lazy">
+      <img src="photo/lantern.png" alt="Photography 2" loading="lazy">
+      <img src="photo/bsb_catcher.jpg" alt="Photography 3" loading="lazy">
+      <img src="photo/flag.jpg" alt="Photography 4" loading="lazy">
+      <img src="photo/shipman.jpg" alt="Photography 5" loading="lazy">
+      <img src="photo/guitar_tight.jpg" alt="Photography 6" loading="lazy">
+      <img src="photo/sbark.jpg" alt="Photography 7" loading="lazy">
+      <img src="photo/josh_bass.jpg" alt="Photography 8" loading="lazy">
+      <img src="photo/miss.JPG" alt="Photography 9" loading="lazy">
+      
+    </div>
+  </section>
+
+  <!-- 
+  <section class="clients" id="clients">
+    <h2>Brands We've Worked With</h2>
+    <div class="clients-logos">
+      <img src="client1-logo.png" alt="Client 1" />
+      <img src="client2-logo.png" alt="Client 2" />
+      <img src="client3-logo.png" alt="Client 3" />
+      <img src="client4-logo.png" alt="Client 4" />
+    </div>
+  </section>
+-->
+
+  <!-- <section class="testimonials" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="services-list">
+      <div><em>“Magnolia Visuals took our vision and elevated it beyond what we imagined. Their work felt like art.”</em><br/>– Jenna R., FlySouth Coffee</div>
+      <div><em>“Professional, passionate, and insanely creative. We loved every second working with them.”</em><br/>– Cole & Anna P.</div>
+    </div>
+  </section>
+-->
+
+  <section class="contact" id="contact" data-aos="zoom-in-up">
+    <h2>How can we help you?</h2>
+    <form action="https://formspree.io/f/xovwjogr" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    
+  </section>
+
+  <footer>
+    &copy; 2025 Magnolia Visuals — All rights reserved.
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+   AOS.init();
+  </script>
+</body>
+</html>
