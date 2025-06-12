@@ -17,7 +17,12 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="icon" href="icons/white_trans.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+  
+
   <link rel="stylesheet" href="style.css">
+  
   <script defer src="script.js"></script>
   <style>
     .portfolio-grid, .photo-grid {
@@ -63,7 +68,14 @@
   opacity: 0.5;
   z-index: 9999;
 }
-
+@media (max-width: 768px) {
+  body::after {
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
   </style>
 </head>
 <body>
@@ -153,20 +165,20 @@
   </section>
 
   <section class="photo-gallery" id="photography" data-aos="zoom-in-up">
-    <h2>Photography Highlights</h2>
-    <div class="photo-grid">
-      <img src="photo/fire.jpg" alt="Photography 1" loading="lazy">
-      <img src="photo/lantern.png" alt="Photography 2" loading="lazy">
-      <img src="photo/bsb_catcher.jpg" alt="Photography 3" loading="lazy">
-      <img src="photo/flag.jpg" alt="Photography 4" loading="lazy">
-      <img src="photo/shipman.jpg" alt="Photography 5" loading="lazy">
-      <img src="photo/guitar_tight.jpg" alt="Photography 6" loading="lazy">
-      <img src="photo/sbark.jpg" alt="Photography 7" loading="lazy">
-      <img src="photo/josh_bass.jpg" alt="Photography 8" loading="lazy">
-      <img src="photo/miss.JPG" alt="Photography 9" loading="lazy">
-      
-    </div>
-  </section>
+  <h2>Photography Highlights</h2>
+  <div class="photo-grid">
+    <a href="photo/full/fire.jpg"><img src="photo/fire.jpg" alt="Photography 1" loading="lazy"></a>
+    <a href="photo/full/lantern.png"><img src="photo/lantern.jpg" alt="Photography 2" loading="lazy"></a>
+    <a href="photo/full/bsb_catcher.jpg"><img src="photo/bsb_catcher.jpg" alt="Photography 3" loading="lazy"></a>
+    <a href="photo/full/flag.jpg"><img src="photo/flag.jpg" alt="Photography 4" loading="lazy"></a>
+    <a href="photo/full/shipman.jpg"><img src="photo/shipman.jpg" alt="Photography 5" loading="lazy"></a>
+    <a href="photo/full/guitar_tight.jpg"><img src="photo/guitar_tight.jpg" alt="Photography 6" loading="lazy"></a>
+    <a href="photo/full/sbark.jpg"><img src="photo/sbark.jpg" alt="Photography 7" loading="lazy"></a>
+    <a href="photo/full/josh_bass.jpg"><img src="photo/josh_bass.jpg" alt="Photography 8" loading="lazy"></a>
+    <a href="photo/full/miss.jpg"><img src="photo/miss.JPG" alt="Photography 9" loading="lazy"></a>
+  </div>
+</section>
+
 
   <!-- 
   <section class="clients" id="clients">

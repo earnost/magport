@@ -231,3 +231,12 @@ html {
   background: url('play-icon.png') no-repeat center center;
   background-size: contain;
 }
+@media (max-width: 768px) {
+  .hero .buttons a {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .hero .buttons a:last-child {
+    margin-bottom: 0;
+  }
+}
