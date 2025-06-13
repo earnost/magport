@@ -74,3 +74,5 @@ document.querySelectorAll('.photo-grid a').forEach(link => {
     });
   });
 });
+
+

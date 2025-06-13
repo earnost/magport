@@ -19,7 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
   <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
-  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 
   <link rel="stylesheet" href="style.css">
   
@@ -36,15 +38,12 @@
       grid-template-columns: repeat(3, 1fr);
     }
     .photo-grid img {
-      width: auto;
-      max-width: 100%;
-      max-height: 100%;
-      border-radius: 0.5rem;
-      display: block;
-      margin: auto;
-      align-self: center;
-      justify-self: center;
-    }
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
     .portfolio-item video {
       width: auto;
       max-width: 100%;
@@ -77,14 +76,34 @@
   }
 }
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Magnolia Visuals",
+  "image": "https://magnoliavisuals.com/icons/ambre_trans.png",
+  "url": "https://magnoliavisuals.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jackson",
+    "addressRegion": "MS",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.instagram.com/getmagnoliavisuals",
+  ]
+}
+</script>
+
 </head>
 <body>
   <header>
     <div class="logo">
+      <a href="index.html">
       Magnolia Visuals
     </div>
     <div class="logo-container">
-  <img src="icons/grey_trans.png" alt="Magnolia Logo" style="height: 48px; vertical-align: middle;">
+  <img src="icons/grey_trans.png" alt="Magnolia Logo" style="height: 48px; vertical-align: middle;"></a>
   </div>
   </div>
     <button class="menu-toggle" id="menuToggle">☰</button>
@@ -97,7 +116,7 @@
   </header>
 
   <section class="hero">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline preload="metadata" poster="thumb/poster.png">
       <source src="video/hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -120,7 +139,7 @@
     <h2>What We Do</h2>
     <div class="services-list">
       <div><strong>Video Production</strong><br/>From cinematic commercials to heartfelt wedding films, we craft video content that tells your story with clarity, emotion, and impact. Our services include pre-production planning, professional filming, and high-end editing tailored to your brand or occasion.</div>
-      <div><strong>Photography</strong><br/>We offer styled brand shoots, lifestyle imagery, product photography, sports, and event coverage. Our photography captures the tone and texture of your story with an editorial eye.      </div>
+      <div><strong>Photography</strong><br/>We offer styled brand shoots, lifestyle imagery, product photography, athletics, and event coverage. We capture the tone and texture of your story with an editorial eye. View our photo and video <a href="gear.html">gear list</a>.   </div>
       <div><strong>Design</strong><br/>Our design work ranges from bold visual identities to motion graphics and digital content packages. We help brands express their personality through compelling logos, typography, layouts, and custom assets.      </div>
       <div><strong>Creative Strategy</strong><br/>        With a strong understanding of audience and narrative, we guide your vision from idea to execution. We develop storytelling strategies, campaign content plans, and visual direction to ensure your brand connects and converts.      </div>
     </div>
@@ -167,17 +186,36 @@
   <section class="photo-gallery" id="photography" data-aos="zoom-in-up">
   <h2>Photography Highlights</h2>
   <div class="photo-grid">
-    <a href="photo/full/fire.jpg"><img src="photo/fire.jpg" alt="Photography 1" loading="lazy"></a>
-    <a href="photo/full/lantern.png"><img src="photo/lantern.jpg" alt="Photography 2" loading="lazy"></a>
-    <a href="photo/full/bsb_catcher.jpg"><img src="photo/bsb_catcher.jpg" alt="Photography 3" loading="lazy"></a>
-    <a href="photo/full/flag.jpg"><img src="photo/flag.jpg" alt="Photography 4" loading="lazy"></a>
-    <a href="photo/full/shipman.jpg"><img src="photo/shipman.jpg" alt="Photography 5" loading="lazy"></a>
-    <a href="photo/full/guitar_tight.jpg"><img src="photo/guitar_tight.jpg" alt="Photography 6" loading="lazy"></a>
-    <a href="photo/full/sbark.jpg"><img src="photo/sbark.jpg" alt="Photography 7" loading="lazy"></a>
-    <a href="photo/full/josh_bass.jpg"><img src="photo/josh_bass.jpg" alt="Photography 8" loading="lazy"></a>
-    <a href="photo/full/miss.jpg"><img src="photo/miss.JPG" alt="Photography 9" loading="lazy"></a>
+    <a href="photo/full/fire.jpg" data-lightbox="gallery" data-title="Firefighter">
+      <img src="photo/fire.jpg" alt="Firefighter promo" loading="lazy" />
+    </a>
+    <a href="photo/full/lantern.png" data-lightbox="gallery" data-title="Lantern">
+      <img src="photo/lantern.jpg" alt="Glowing lantern at night" loading="lazy" />
+    </a>
+    <a href="photo/full/bsb_catcher.jpg" data-lightbox="gallery" data-title="Baseball Catcher">
+      <img src="photo/bsb_catcher.jpg" alt="Mississippi State vs Ole Miss Baseball" loading="lazy" />
+    </a>
+    <a href="photo/full/flag.jpg" data-lightbox="gallery" data-title="Concert">
+      <img src="photo/flag.jpg" alt="Concert" loading="lazy" />
+    </a>
+    <a href="photo/full/shipman.jpg" data-lightbox="gallery" data-title="Softball">
+      <img src="photo/shipman.jpg" alt="Alabama Softball" loading="lazy" />
+    </a>
+    <a href="photo/full/guitar_tight.jpg" data-lightbox="gallery" data-title="Guitar Close-Up">
+      <img src="photo/guitar_tight.jpg" alt="Close-up of guitar" loading="lazy" />
+    </a>
+    <a href="photo/full/sbark.jpg" data-lightbox="gallery" data-title="Softball Pitchern">
+      <img src="photo/sbark.jpg" alt="Arkansas Softball" loading="lazy" />
+    </a>
+    <a href="photo/full/josh_bass.jpg" data-lightbox="gallery" data-title="Bass Guitar">
+      <img src="photo/josh_bass.jpg" alt="Pinelake Church" loading="lazy" />
+    </a>
+    <a href="photo/full/miss.jpg" data-lightbox="gallery" data-title="Baseball">
+      <img src="photo/miss.jpg" alt="Ole Miss Baseball" loading="lazy" />
+    </a>
   </div>
 </section>
+
 
 
   <!-- 
