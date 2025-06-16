@@ -2,6 +2,14 @@
 
 function loadVimeo(wrapper) {
   const id = wrapper.getAttribute('data-vimeo-id');
+
+  if (window.innerWidth <= 768) {
+    // On mobile, open video in a new tab for better UX
+    window.open(`https://vimeo.com/${id}`, '_blank');
+    return;
+  }
+
+  // Desktop experience - load the embedded iframe
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', `https://player.vimeo.com/video/${id}?autoplay=1&title=0&byline=0&portrait=0&badge=0&autopause=0`);
   iframe.setAttribute('frameborder', '0');
@@ -12,26 +20,10 @@ function loadVimeo(wrapper) {
   iframe.style.left = 0;
   iframe.style.width = '100%';
   iframe.style.height = '100%';
-
   wrapper.innerHTML = '';
   wrapper.appendChild(iframe);
-
-  // ✅ Only attempt fullscreen on mobile
-  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-  if (isMobile) {
-    setTimeout(() => {
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.mozRequestFullScreen) {
-        iframe.mozRequestFullScreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
-    }, 200); // short delay to ensure iframe is attached
-  }
 }
+
 
 
 document.querySelectorAll('.photo-grid a').forEach(link => {
