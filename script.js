@@ -1,14 +1,6 @@
 // Magnolia Visuals JS - Handle Mobile Menu Toggle
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menuToggle");
-    const navbar = document.getElementById("navbar");
-  
-    menuToggle.addEventListener("click", function () {
-      navbar.classList.toggle("active");
-    });
-  });
-  function loadVimeo(wrapper) {
+function loadVimeo(wrapper) {
   const id = wrapper.getAttribute('data-vimeo-id');
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', `https://player.vimeo.com/video/${id}?autoplay=1&title=0&byline=0&portrait=0&badge=0&autopause=0`);
@@ -20,9 +12,27 @@ document.addEventListener("DOMContentLoaded", function () {
   iframe.style.left = 0;
   iframe.style.width = '100%';
   iframe.style.height = '100%';
+
   wrapper.innerHTML = '';
   wrapper.appendChild(iframe);
+
+  // ✅ Only attempt fullscreen on mobile
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  if (isMobile) {
+    setTimeout(() => {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.mozRequestFullScreen) {
+        iframe.mozRequestFullScreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    }, 200); // short delay to ensure iframe is attached
+  }
 }
+
 
 document.querySelectorAll('.photo-grid a').forEach(link => {
   link.addEventListener('click', e => {
