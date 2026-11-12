@@ -1,5 +1,15 @@
 // Magnolia Visuals JS - Handle Mobile Menu Toggle
 
+const menuToggle = document.getElementById('menuToggle');
+const navbar = document.getElementById('navbar');
+
+if (menuToggle && navbar) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navbar.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
 function loadVimeo(wrapper) {
   const id = wrapper.getAttribute('data-vimeo-id');
 
@@ -76,5 +86,4 @@ document.querySelectorAll('.photo-grid a').forEach(link => {
     });
   });
 });
-
 

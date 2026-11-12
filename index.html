@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Magnolia Visuals">
-  <meta property="og:description" content="Cinematic video production, photography, and design.">
-  <meta property="og:image" content="https://getmagnoliavisuals.com/icons/ambre_trans.png">
-  <meta property="og:url" content="https://getmagnoliavisuals.com">
-  <meta property="og:type" content="website">
+  <title>Mississippi Video Production, Photography &amp; Design | Magnolia Visuals</title>
+  <meta name="description" content="Magnolia Visuals is a Mississippi creative studio producing cinematic video, photography, branding, and creative strategy for businesses, artists, and events across the Southeast.">
   <meta name="author" content="Magnolia Visuals">
-
-  <title>Magnolia Visuals</title>
-  <meta name="description" content="Magnolia Visuals is a Mississippi based creative studio offering cinematic video production, photography, and branding for bold storytellers.">
-  <meta name="keywords" content="video production, Mississippi videographer, photography, branding, design studio, creative agency">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://getmagnoliavisuals.com/">
+  <meta property="og:title" content="Mississippi Video Production, Photography &amp; Design | Magnolia Visuals">
+  <meta property="og:description" content="Cinematic video production, photography, branding, and creative strategy for bold stories across the Southeast.">
+  <meta property="og:image" content="https://getmagnoliavisuals.com/icons/ambre_trans.png">
+  <meta property="og:image:alt" content="Magnolia Visuals logo">
+  <meta property="og:url" content="https://getmagnoliavisuals.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Magnolia Visuals">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mississippi Video Production, Photography &amp; Design | Magnolia Visuals">
+  <meta name="twitter:description" content="Cinematic video production, photography, branding, and creative strategy across the Southeast.">
+  <meta name="twitter:image" content="https://getmagnoliavisuals.com/icons/ambre_trans.png">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="icon" href="icons/white_trans.png" type="image/png">
@@ -52,7 +58,7 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .portfolio-item h4 {
+    .portfolio-item h3 {
       margin: 1rem 0 0.5rem;
     }
     @media (max-width: 768px) {
@@ -84,10 +90,14 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
+  "@id": "https://getmagnoliavisuals.com/#business",
   "name": "Magnolia Visuals",
-  "image": "https://magnoliavisuals.com/icons/ambre_trans.png",
-  "url": "https://magnoliavisuals.com",
+  "description": "Mississippi creative studio specializing in cinematic video production, photography, branding, and creative strategy.",
+  "image": "https://getmagnoliavisuals.com/icons/ambre_trans.png",
+  "url": "https://getmagnoliavisuals.com/",
+  "areaServed": ["Mississippi", "Southeastern United States"],
+  "serviceType": ["Video Production", "Photography", "Branding and Design", "Creative Strategy"],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Jackson",
@@ -95,7 +105,7 @@
     "addressCountry": "US"
   },
   "sameAs": [
-    "https://www.instagram.com/getmagnoliavisuals",
+    "https://www.instagram.com/getmagnoliavisuals"
   ]
 }
 </script>
@@ -104,15 +114,13 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
-      Magnolia Visuals
+      <a href="/" aria-label="Magnolia Visuals home">Magnolia Visuals</a>
     </div>
     <div class="logo-container">
-  <img src="icons/grey_trans.png" alt="Magnolia Logo" style="height: 48px; vertical-align: middle;"></a>
-  </div>
-  </div>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <nav id="navbar">
+      <a href="/" aria-label="Magnolia Visuals home"><img src="icons/grey_trans.png" alt="Magnolia Visuals" style="height: 48px; vertical-align: middle;"></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-controls="navbar" aria-expanded="false">☰</button>
+    <nav id="navbar" aria-label="Primary navigation">
       <a href="#portfolio">Work</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -120,13 +128,15 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <main>
+  <section class="hero" aria-labelledby="hero-heading">
     <video autoplay muted loop playsinline preload="metadata" poster="thumb/poster.png">
       <source src="video/hero.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="hero-content">
-      <h1>Rooted in Story. Crafted in Light.</h1>
+      <h1 id="hero-heading">Mississippi Video Production, Photography &amp; Design</h1>
+      <p class="hero-tagline">Rooted in Story. Crafted in Light.</p>
       <p>We bring bold ideas to life through video, photography, and design.</p>
       <div class="buttons">
         <a href="#services">Explore Services</a>
@@ -135,30 +145,30 @@
     </div>
   </section>
 
-  <section class="about" id="about" data-aos="zoom-in-up">
-    <h2>Our Story</h2>
+  <section class="about" id="about" data-aos="zoom-in-up" aria-labelledby="about-heading">
+    <h2 id="about-heading">Our Story</h2>
     <p>Magnolia Visuals is a Mississippi based creative team serving the southeast, offering full-service production, design, and strategy. We're passionate about bringing stories to life with quality and intentionality.</p>
   </section>
 
-  <section class="services" id="services" data-aos="zoom-in-up">
-    <h2>What We Do</h2>
+  <section class="services" id="services" data-aos="zoom-in-up" aria-labelledby="services-heading">
+    <h2 id="services-heading">Creative Services</h2>
     <div class="services-list">
-      <div><strong>Video Production</strong><br/>From cinematic commercials to heartfelt wedding films, we craft video content that tells your story with clarity, emotion, and impact. Our services include pre-production planning, professional filming, and high-end editing tailored to your brand or occasion.</div>
-      <div><strong>Photography</strong><br/>We offer styled brand shoots, lifestyle imagery, product photography, athletics, and event coverage. We capture the tone and texture of your story with an editorial eye. View our photo and video <a href="gear.html">gear list</a>.   </div>
-      <div><strong>Design</strong><br/>Our design work ranges from bold visual identities to motion graphics and digital content packages. We help brands express their personality through compelling logos, typography, layouts, and custom assets.      </div>
-      <div><strong>Creative Strategy</strong><br/>        With a strong understanding of audience and narrative, we guide your vision from idea to execution. We develop storytelling strategies, campaign content plans, and visual direction to ensure your brand connects and converts.      </div>
+      <div><h3>Video Production</h3><p>From cinematic commercials to heartfelt wedding films, we craft video content that tells your story with clarity, emotion, and impact. Our services include pre-production planning, professional filming, and high-end editing tailored to your brand or occasion.</p></div>
+      <div><h3>Photography</h3><p>We offer styled brand shoots, lifestyle imagery, product photography, athletics, and event coverage. We capture the tone and texture of your story with an editorial eye. View our photo and video <a href="gear.html">gear list</a>.</p></div>
+      <div><h3>Design</h3><p>Our design work ranges from bold visual identities to motion graphics and digital content packages. We help brands express their personality through compelling logos, typography, layouts, and custom assets.</p></div>
+      <div><h3>Creative Strategy</h3><p>With a strong understanding of audience and narrative, we guide your vision from idea to execution. We develop storytelling strategies, campaign content plans, and visual direction to ensure your brand connects and converts.</p></div>
     </div>
   </section>
 
-  <section class="portfolio" id="portfolio" data-aos="zoom-in-up">
-    <h2>Featured Work</h2>
+  <section class="portfolio" id="portfolio" data-aos="zoom-in-up" aria-labelledby="portfolio-heading">
+    <h2 id="portfolio-heading">Featured Video Production Work</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="video-wrapper" onclick="loadVimeo(this)" data-vimeo-id="1092650641">
          <img src="thumb/couchman.png" alt="Play video" class="video-thumbnail">
          <div class="play-button"></div>
         </div>
-        <h4>Wedding: Luke & Macy Couchman</h4>
+        <h3>Wedding: Luke &amp; Macy Couchman</h3>
         <p>Couchman wedding in Madison, MS</p>
       </div>
       <div class="portfolio-item">
@@ -166,7 +176,7 @@
          <img src="thumb/reel.png" alt="Play video" class="video-thumbnail">
          <div class="play-button"></div>
         </div>
-        <h4>Athletics Reel</h4>
+        <h3>Athletics Reel</h3>
         <p>Highlight clips from 5 years of Mississippi State Athletics</p>
       </div>
       <div class="portfolio-item">
@@ -174,7 +184,7 @@
   <img src="thumb/maddy.png" alt="Testimony Video" class="video-thumbnail">
   <div class="play-button"></div>
 </div>
-        <h4>Maddy Anderson Testimony</h4>
+        <h3>Maddy Anderson Testimony</h3>
         <p>The story of how an injury led to a restored faith</p>
       </div>
       <div class="portfolio-item">
@@ -182,14 +192,14 @@
   <img src="thumb/river.png" alt="Testimony Video" class="video-thumbnail">
   <div class="play-button"></div>
   </div>
-        <h4>"Down to the River" Zechariah Lloyd Music Video</h4>
-        <p>Music video for Mississppi's 2022 Songwriter of the Year</p>
+        <h3>"Down to the River" Zechariah Lloyd Music Video</h3>
+        <p>Music video for Mississippi's 2022 Songwriter of the Year</p>
       </div>
     </div>
   </section>
 
-  <section class="photo-gallery" id="photography" data-aos="zoom-in-up">
-  <h2>Photography Highlights</h2>
+  <section class="photo-gallery" id="photography" data-aos="zoom-in-up" aria-labelledby="photography-heading">
+  <h2 id="photography-heading">Photography Highlights</h2>
   <div class="photo-grid">
     <a href="photo/full/fire.jpg" data-lightbox="gallery" data-title="Firefighter">
       <img src="photo/fire.jpg" alt="Firefighter promo" loading="lazy" />
@@ -244,16 +254,20 @@
   </section>
 -->
 
-  <section class="contact" id="contact" data-aos="zoom-in-up">
-    <h2>How can we help you?</h2>
+  <section class="contact" id="contact" data-aos="zoom-in-up" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Start Your Project</h2>
     <form action="https://formspree.io/f/xovwjogr" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Your Name" autocomplete="name" required>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Your Email" autocomplete="email" required>
+      <label for="message">Project details</label>
+      <textarea id="message" name="message" placeholder="Tell us about your project" required></textarea>
       <button type="submit">Send Message</button>
     </form>
     
   </section>
+  </main>
 
   <footer>
     &copy; 2025 Magnolia Visuals — All rights reserved.
